@@ -8,10 +8,16 @@
 
 
 <section>
+	{#if pencils >= 10}
+	<h1>a baby could earn more</h1>
+	{:else}
 	<h1>ur not cash money</h1>
-	{pencils}
+	{/if}
+
+	
+	${pencils}
 	<button on:click={makePencil}>
-	make cool pencil
+	make money
 	</button>
 </section>
 
