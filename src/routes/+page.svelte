@@ -10,7 +10,7 @@
 <section>
 	{pencils}
 	<button on:click={makePencil}>
-	make pencil	
+	make cool pencil
 	</button>
 </section>
 
