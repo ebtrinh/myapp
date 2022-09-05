@@ -1,21 +1,28 @@
 <script>
 	let makePencil = function(){
-		pencils++
+		money++
 	}
-	let pencils = 0;
+	let money = 0;
 </script>
 
 
 
 <section>
-	{#if pencils >= 10}
-	<h1>a baby could earn more</h1>
-	{:else}
-	<h1>ur not cash money</h1>
-	{/if}
+	<h1>
+		{#if money >= 100}
+		a hundy?
+		{:else if money >= 50}
+		you have just 50?
+		{:else if money >= 10}
+		a baby could make more
+		{:else if money >= 0}
+		ur not cash money
+		{/if}
+	</h1>
+	
 
 	
-	${pencils}
+	${money}
 	<button on:click={makePencil}>
 	make money
 	</button>
