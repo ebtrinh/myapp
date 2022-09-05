@@ -8,6 +8,7 @@
 
 
 <section>
+	<h1>ur not cash money</h1>
 	{pencils}
 	<button on:click={makePencil}>
 	make cool pencil
