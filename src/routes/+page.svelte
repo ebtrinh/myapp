@@ -11,6 +11,7 @@
 	<h1>
 		{#if money >= 100}
 		a hundy?
+		<a href="/game" >Congrats,  now you can play the game </a>
 		{:else if money >= 50}
 		you have just 50?
 		{:else if money >= 10}
