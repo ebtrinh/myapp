@@ -1,6 +1,6 @@
 <script>
 import Counter from "$lib/Counter.svelte";
-
+	let Debug = false
 	let makePencil = function(){
 		money++
 	}
@@ -28,10 +28,10 @@ import Counter from "$lib/Counter.svelte";
 		hahahahahaha
 		{:else if money >= 100}
 		a hundy?
-		<button on:click={onplaynowclick}>you can play now</button>
+		<button on:click={onplaynowclick} class="bg-white p-1 rounded-md border-2 border-black">you can play now</button>
 		
 		{#if rickroll == true}
-		<img src = "https://c.tenor.com/_4YgA77ExHEAAAAd/rick-roll.gif" alt = "never gonna give you up">
+		<img src = "https://c.tenor.com/_4YgA77ExHEAAAAd/rick-roll.gif" alt = "never gonna give you up" class="m-auto">
 		
 		{/if}
 		{:else if money >= 50}
@@ -43,14 +43,14 @@ import Counter from "$lib/Counter.svelte";
 		{/if}
 	</h1>
 	
-
+	
 	
 	${money}
 	{#if money < 140}
 		<button on:click={makePencil} class="ethanBtn">
 		make money
 		</button>
-	{:else if money = 140}
+	{:else if money == 140}
 	<button on:click={makePencil} class="ethanBtn fixed left-0 bottom-0">
 	make money
 	</button>
@@ -58,6 +58,11 @@ import Counter from "$lib/Counter.svelte";
 
 </section>
 
+	{#if Debug == true}
+	<section class="fixed right-0 bottom-0">
+		<input type = "text" bind:value={money} />
+	</section>
+	{/if}
 <style>
 
 	.ethanBtn{
@@ -91,3 +96,5 @@ import Counter from "$lib/Counter.svelte";
 		display: block;
 	}
 </style>
+
+
